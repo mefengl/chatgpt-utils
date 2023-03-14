@@ -1,17 +1,18 @@
 # chatgpt-utils
-getSendButton, getNewChatButton, getRegenerateButton...
+
+getSubmitButton, getTextarea, getRegenerateButton, getNewChatButton...
 
 ```js
-const get_submit_button = () => {
+const getSubmitButton = () => {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
-  const result = buttons[buttons.length - 1]; // by textContent maybe better
+  const result = buttons[buttons.length - 1]; // can also use: const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase() === 'submit');
   return result;
 };
 ```
 
 ```js
-const get_textarea = () => {
+const getTextarea = () => {
   const form = document.querySelector('form');
   const textareas = form.querySelectorAll('textarea');
   const result = textareas[0];
@@ -20,14 +21,10 @@ const get_textarea = () => {
 ```
 
 ```js
-const get_regenerate_button = () => {
+const getRegenerateButton = () => {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
-  for (let i = 0; i < buttons.length; i++) {
-    const buttonText = buttons[i].textContent.trim().toLowerCase();
-    if (buttonText.includes('regenerate')) {
-      return buttons[i];
-    }
-  }
+  const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase().includes('regenerate')); // can also use a for loop
+  return result;
 };
 ```
