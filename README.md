@@ -3,7 +3,7 @@
 getSubmitButton, getTextarea, getRegenerateButton, getNewChatButton...
 
 ```js
-const getSubmitButton = () => {
+function getSubmitButton() {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
   const result = buttons[buttons.length - 1];
@@ -12,7 +12,7 @@ const getSubmitButton = () => {
 ```
 
 ```js
-const getTextarea = () => {
+function getTextarea() {
   const form = document.querySelector('form');
   const textareas = form.querySelectorAll('textarea');
   const result = textareas[0];
@@ -21,7 +21,7 @@ const getTextarea = () => {
 ```
 
 ```js
-const getRegenerateButton = () => {
+function getRegenerateButton() {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
   const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase().includes('regenerate'));
@@ -30,7 +30,7 @@ const getRegenerateButton = () => {
 ```
 
 ```js
-const getNewChatButton = () => {
+function getNewChatButton() {
   const aElements = document.getElementsByTagName('a');
   const result = Array.from(aElements).find(a => a.textContent === 'New chat');
   return result;
