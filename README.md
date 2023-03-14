@@ -28,3 +28,11 @@ const getRegenerateButton = () => {
   return result;
 };
 ```
+
+```js
+const getNewChatButton = () => {
+  const aElements = document.getElementsByTagName('a');
+  const result = Array.from(aElements).find(a => a.textContent === 'New chat');
+  return result;
+};
+```
