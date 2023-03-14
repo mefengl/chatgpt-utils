@@ -6,7 +6,7 @@ getSubmitButton, getTextarea, getRegenerateButton, getNewChatButton...
 const getSubmitButton = () => {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
-  const result = buttons[buttons.length - 1]; // can also use: const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase() === 'submit');
+  const result = buttons[buttons.length - 1];
   return result;
 };
 ```
@@ -24,7 +24,7 @@ const getTextarea = () => {
 const getRegenerateButton = () => {
   const form = document.querySelector('form');
   const buttons = form.querySelectorAll('button');
-  const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase().includes('regenerate')); // can also use a for loop
+  const result = Array.from(buttons).find(button => button.textContent.trim().toLowerCase().includes('regenerate'));
   return result;
 };
 ```
