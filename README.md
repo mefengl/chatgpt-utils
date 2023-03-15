@@ -30,6 +30,14 @@ function getRegenerateButton() {
 ```
 
 ```js
+function getStopGeneratingButton() {
+    const form = document.querySelector('form');
+    const buttons = form.querySelectorAll('button');
+    return Array.from(buttons).find(button => button.textContent.trim().toLowerCase().includes('stop generating'));
+}
+```
+
+```js
 function getNewChatButton() {
   const aElements = document.getElementsByTagName('a');
   const result = Array.from(aElements).find(a => a.textContent === 'New chat');
