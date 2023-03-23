@@ -1,6 +1,4 @@
-# ChatGPT Utils (Archived)
-
-**Notice:** This repository has been archived and will no longer be maintained. The functions provided in this repository will be integrated into the [chatgpt.js](https://github.com/adamlui/chatgpt.js) project.
+# ChatGPT Utils
 
 getSubmitButton, getTextarea, getRegenerateButton, getNewChatButton...
 
